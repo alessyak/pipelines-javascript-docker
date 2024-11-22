@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: alessyakpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: alessyakpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: alessyakpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: alessyakpipelinesjavascriptdocker 
+          image: alessyacontainerregistry.azurecr.io/alessyakpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
